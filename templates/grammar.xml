@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.w3.org/2001/06/grammar http://www.w3.org/TR/speech-grammar/grammar.xsd" 
+		version="1.0" xml:lang="en-US" mode="voice" root="main">
+		
+	<rule id="main" scope="public">
+		<item repeat="1-">
+			<ruleref uri="#number"/>
+		</item>
+		<item>
+			<ruleref uri="#name"/>
+		</item>
+		<item repeat="0-">
+			<ruleref uri="#direction"/>
+		</item>
+	</rule>		
+	
+	<rule id="number" scope="private">
+		<one-of>
+			<item>1</item>
+			<item>2</item>
+			<item>3</item>
+			<item>4</item>
+			<item>5</item>
+			<item>6</item>
+			<item>7</item>
+			<item>8</item>
+			<item>9</item>
+			<item>5</item>
+		</one-of>
+	</rule>
+	
+	<rule id="name" scope="private">
+		<one-of>
+			%items%
+		</one-of>
+	</rule>
+	
+	<rule id="direction" scope="private">
+		<one-of>
+			<item>north<tag>N</tag></item>
+			<item>south<tag>S</tag></item>
+			<item>east<tag>E</tag></item>
+			<item>west<tag>W</tag></item>
+			<item>north east<tag>NE</tag></item>
+			<item>north west<tag>NW</tag></item>
+			<item>south east<tag>SE</tag></item>
+			<item>south west<tag>SW</tag></item>
+		</one-of>
+	</rule>
+
+</grammar>

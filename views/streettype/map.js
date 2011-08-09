@@ -1,0 +1,1 @@
+function(doc) {\nif(doc.properties.ST_TYPE) {\n  emit(doc.properties.ST_TYPE, null);\n}\n}

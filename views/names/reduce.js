@@ -1,0 +1,1 @@
+function(keys, values) {\n  return true;\n}

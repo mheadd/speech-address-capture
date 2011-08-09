@@ -1,0 +1,1 @@
+function(doc) {\nif(doc.properties.ZIP_CODE) {\n  emit(doc.properties.ZIP_CODE, null);\n}\n}
